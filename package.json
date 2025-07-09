@@ -1,0 +1,11 @@
+{
+  "name": "voicesofbritain",
+  "version": "1.0.0",
+  "description": "Independent zine-style news site built with 11ty",
+  "scripts": {
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  }
+}
