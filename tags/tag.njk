@@ -1,24 +1,20 @@
 ---
 layout: layout.njk
+permalink: "/tags/{{ tag | slug }}/"
 pagination:
-  data: collections
-  size: 1
-  alias: tag
-  filter: post
-  before: function (collections) {
-    return Object.keys(collections);
-  }
-permalink: "tags/{{ tag | slug }}/index.html"
+  data: collections[tag]
+  size: 10
+  alias: posts
+  addAllPagesToCollections: true
 ---
 
-<h2>Articles tagged with "{{ tag }}"</h2>
+<h1>Articles tagged: {{ tag }}</h1>
 
 <ul>
-  {% for item in collections[tag] %}
+  {% for post in posts %}
     <li>
-      <a href="{{ item.url }}">{{ item.data.title }}</a>
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+      <small> – {{ post.date | date("MMMM D, YYYY") }}</small>
     </li>
   {% endfor %}
 </ul>
-
-<p><a href="/posts/">← Back to articles</a></p>
