@@ -1,9 +1,6 @@
-layout: layouts/base.njk
-tags: post
 ---
-title: Britain is Broken
-layout: layout.njk
-tags: [nhs, poverty, propaganda]
+title: Crisis Masculinity
+layout: layouts/layout.njk
 ---
 
 ## Britain is Broken
