@@ -22,3 +22,8 @@ module.exports = function (eleventyConfig) {
     },
   };
 };
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addFilter("tagFilter", function(collections) {
+    return Object.keys(collections).filter(tag => tag !== "all" && !tag.startsWith("_"));
+  });
+};
