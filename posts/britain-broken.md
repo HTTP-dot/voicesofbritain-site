@@ -1,3 +1,4 @@
+tags: post
 ---
 title: Britain is Broken
 layout: layout.njk
