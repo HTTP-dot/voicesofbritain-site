@@ -1,3 +1,4 @@
+layout: layouts/base.njk
 tags: post
 ---
 title: "Crisis Masculinity: How Capitalism Manufactures Misogyny to Keep Itself Alive"
