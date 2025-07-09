@@ -8,7 +8,7 @@ title: Articles
 <ul>
   {% for post in collections.post | reverse %}
     <li style="margin-bottom: 1rem;">
-      <a href="{{ post.url }}"><strong>{{ post.data.title }}</strong></a><br/>
+      <a href="{{ post.data.url }}"><strong>{{ post.data.title }}</strong></a><br/>
       {% if post.data.tags %}
         {% for tag in post.data.tags %}
           <a class="tag" href="/tags/{{ tag | slug }}/">{{ tag }}</a>
