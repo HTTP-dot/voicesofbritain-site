@@ -1,7 +1,10 @@
+
 ---
-title: Crisis Masculinity: How Capitalism Manufactures Misogyny to Keep Itself Alive
+title: "Crisis Masculinity: How Capitalism Manufactures Misogyny to Keep Itself Alive"
 layout: layout.njk
-tags: [misogyny, masculinity, class, capitalism, feminism]
+tags: article
+---
+
 author: Bryden Churchmichael
 ---
 Author’s note:
