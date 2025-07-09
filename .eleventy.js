@@ -1,29 +1,15 @@
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("styles.css");
+const { DateTime } = require("luxon");
 
-  eleventyConfig.addCollection("tagList", function (collectionApi) {
-    let tagSet = new Set();
-    collectionApi.getAll().forEach(item => {
-      if ("tags" in item.data) {
-        let tags = item.data.tags;
-        tags = tags.filter(tag => !["post"].includes(tag)); // ignore generic tags
-        for (const tag of tags) {
-          tagSet.add(tag);
-        }
-      }
-    });
-    return [...tagSet];
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addFilter("date", (dateObj, format = "dd LLL yyyy") => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(format);
   });
 
   return {
     dir: {
       input: ".",
       includes: "_includes",
-    },
+      output: "_site"
+    }
   };
-};
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addFilter("tagFilter", function(collections) {
-    return Object.keys(collections).filter(tag => tag !== "all" && !tag.startsWith("_"));
-  });
 };
