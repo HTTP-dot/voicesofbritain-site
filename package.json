@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "description": "Independent zine-style news site built with Eleventy",
   "scripts": {
-    "build": "eleventy",
-    "start": "eleventy --serve"
+    "build": "npm run build:css && eleventy",
+    "start": "npm run build:css && eleventy --serve",
+    "build:css": "npx tailwindcss -i ./styles.css -o ./output.css"
   },
   "dependencies": {
     "axios": "^1.6.8"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11"
   },
   "keywords": [],
   "author": "Bryden Churchmichael",

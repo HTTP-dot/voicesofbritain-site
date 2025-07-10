@@ -21,3 +21,6 @@ a {
   margin-right: 5px;
   text-transform: uppercase;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
